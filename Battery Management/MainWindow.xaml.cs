@@ -24,5 +24,17 @@ namespace Battery_Management
         {
             InitializeComponent();
         }
+
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            FinalValuesBox.ToolTip = "This is a simple text";
+            FinalValuesBox.Visibility = Visibility.Hidden;
+        }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+            label.Content = FinalValuesBox.Text;
+        }
     }
 }

@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Battery_Management"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Car Battery Management and Analysis" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Left" Margin="282,106,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Submit_Click"/>
+        <TextBox x:Name="FinalValuesBox" HorizontalAlignment="Left" Height="32" Margin="282,38,0,0" TextWrapping="Wrap" Text="Please edit here!" VerticalAlignment="Top" Width="160" TextChanged="TextBox_TextChanged"/>
+        <Label x:Name="label" Content="Changes will reflect here!!" HorizontalAlignment="Left" Height="79" Margin="282,158,0,0" VerticalAlignment="Top" Width="174"/>
+
     </Grid>
 </Window>
