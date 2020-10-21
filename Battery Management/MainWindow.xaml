@@ -3,15 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:Battery_Management"
         mc:Ignorable="d"
         Title="Car Battery Management and Analysis" Height="450" Width="800">
     <Grid>
         <Button x:Name="Submit" Content="Calculate" HorizontalAlignment="Left" Margin="314,128,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Submit_Click"/>
-        <Label x:Name="msgBox" Content="Changes will reflect here!!" HorizontalAlignment="Left" Height="128" Margin="10,238,0,0" VerticalAlignment="Top" Width="772"/>
         <Grid HorizontalAlignment="Left" Height="113" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
         <Grid Margin="60,37,580,360">
-            <Slider x:Name="slider00" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.501,1.114" Height="27" Margin="-6,-6,0,0" LargeChange="0.1" Minimum="1" Value="5">
+            <Slider x:Name="slider00" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.501,1.114" Height="27" Margin="-6,-6,0,0" LargeChange="0.1" Minimum="1" Value="5" ValueChanged="Slider00_ValueChanged">
                 <Slider.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -138,9 +138,17 @@
             </Slider>
 
         </Grid>
-        <Label x:Name="label1" Content="Cell-Grid-1" HorizontalAlignment="Left" Height="29" Margin="92,83,0,0" VerticalAlignment="Top" Width="89"/>
-        <Label x:Name="label1_Copy" Content="Cell-Grid-3" HorizontalAlignment="Left" Height="29" Margin="603,83,0,0" VerticalAlignment="Top" Width="96"/>
-        <Label x:Name="label1_Copy1" Content="Cell-Grid-2" HorizontalAlignment="Left" Height="29" Margin="350,83,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label x:Name="label1" Content="Voltage" HorizontalAlignment="Left" Height="29" Margin="92,83,0,0" VerticalAlignment="Top" Width="89"/>
+        <Label x:Name="label1_Copy" Content="Temperature" HorizontalAlignment="Left" Height="29" Margin="603,83,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="label1_Copy1" Content="Current" HorizontalAlignment="Left" Height="29" Margin="350,83,0,0" VerticalAlignment="Top" Width="92"/>
 
+        <Label x:Name="msgBox" Content="Changes will Go here!" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="772" Height="59"/>
+        <Grid Margin="0,355,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="107*"/>
+            </Grid.ColumnDefinitions>
+            <lvc:CartesianChart x:Name="chart" Series="{Binding Source=srs}" Margin="0,-117,0,0" Grid.ColumnSpan="2" />
+        </Grid>
     </Grid>
 </Window>
