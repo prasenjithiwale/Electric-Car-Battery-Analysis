@@ -7,9 +7,140 @@
         mc:Ignorable="d"
         Title="Car Battery Management and Analysis" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Submit" Content="Submit" HorizontalAlignment="Left" Margin="282,106,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Submit_Click"/>
-        <TextBox x:Name="FinalValuesBox" HorizontalAlignment="Left" Height="32" Margin="282,38,0,0" TextWrapping="Wrap" Text="Please edit here!" VerticalAlignment="Top" Width="160" TextChanged="TextBox_TextChanged"/>
-        <Label x:Name="label" Content="Changes will reflect here!!" HorizontalAlignment="Left" Height="79" Margin="282,158,0,0" VerticalAlignment="Top" Width="174"/>
+        <Button x:Name="Submit" Content="Calculate" HorizontalAlignment="Left" Margin="314,128,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Submit_Click"/>
+        <Label x:Name="msgBox" Content="Changes will reflect here!!" HorizontalAlignment="Left" Height="128" Margin="10,238,0,0" VerticalAlignment="Top" Width="772"/>
+        <Grid HorizontalAlignment="Left" Height="113" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
+        <Grid Margin="60,37,580,360">
+            <Slider x:Name="slider00" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.501,1.114" Height="27" Margin="-6,-6,0,0" LargeChange="0.1" Minimum="1" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider01" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.501,1.114" Height="22" LargeChange="0.1" Minimum="1" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider03" HorizontalAlignment="Left" Margin="95,0,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.501,1.114" Height="22" Minimum="1" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider02" HorizontalAlignment="Left" Margin="63,0,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.501,1.114" Height="22" Minimum="1" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+        </Grid>
+        <Grid Margin="314,37,314,360">
+            <Slider x:Name="slider10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider13" HorizontalAlignment="Left" Margin="107,0,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider12" HorizontalAlignment="Left" Margin="71,0,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider11" HorizontalAlignment="Left" Margin="33,0,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+        </Grid>
+        <Grid Margin="568,37,60,360">
+            <Slider x:Name="slider20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider23" HorizontalAlignment="Left" Margin="107,0,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider22" HorizontalAlignment="Left" Margin="71,0,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+            <Slider x:Name="slider21" HorizontalAlignment="Left" Margin="33,0,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.501,1.114" Height="22" Value="5">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.246"/>
+                        <TranslateTransform X="-13.565" Y="-13.506"/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+        </Grid>
+        <Label x:Name="label1" Content="Cell-Grid-1" HorizontalAlignment="Left" Height="29" Margin="92,83,0,0" VerticalAlignment="Top" Width="89"/>
+        <Label x:Name="label1_Copy" Content="Cell-Grid-3" HorizontalAlignment="Left" Height="29" Margin="603,83,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="label1_Copy1" Content="Cell-Grid-2" HorizontalAlignment="Left" Height="29" Margin="350,83,0,0" VerticalAlignment="Top" Width="92"/>
 
     </Grid>
 </Window>

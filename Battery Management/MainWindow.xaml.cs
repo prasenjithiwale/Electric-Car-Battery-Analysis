@@ -25,16 +25,9 @@ namespace Battery_Management
             InitializeComponent();
         }
 
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            FinalValuesBox.ToolTip = "This is a simple text";
-            FinalValuesBox.Visibility = Visibility.Hidden;
-        }
-
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            label.Content = FinalValuesBox.Text;
+            msgBox.Content = "Cell 1: " + Math.Round(slider00.Value, 2) + "\tCell 2: " + Math.Round(slider01.Value,2) + "\tCell 3: " + Math.Round(slider02.Value,2) + "\tCell 4: " + Math.Round(slider03.Value,2);
         }
     }
 }
