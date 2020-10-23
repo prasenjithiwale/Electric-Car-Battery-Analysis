@@ -24,6 +24,9 @@ namespace Battery_Management
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Dashboard dash = new Dashboard();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -77,6 +80,11 @@ namespace Battery_Management
 
         private void Slider00_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = dash;
         }
     }
 }

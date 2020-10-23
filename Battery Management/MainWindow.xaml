@@ -150,5 +150,6 @@
             </Grid.ColumnDefinitions>
             <lvc:CartesianChart x:Name="chart" Series="{Binding Source=srs}" Margin="0,-117,0,0" Grid.ColumnSpan="2" />
         </Grid>
+        <Button x:Name="button" Content="Dashboard" HorizontalAlignment="Left" Margin="603,128,0,0" VerticalAlignment="Top" Width="114" Height="30" Click="Button_Click"/>
     </Grid>
 </Window>
